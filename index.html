@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="padding: 30px;">JS Task</h1>
+    <div>
+        <p>sum of even random numbers in array =<span id="result1"></span></p>
+        <p>sum of values less than index 5 =<span id="result2"></span></p>
+        <p>object printing =<span id="result3"></span></p>
+
+    </div>
+
+
+    <script>
+
+        var randarray = [];
+        var rnum;
+        var sum = 0;
+        var evensum = 0;
+
+        for (var i = 0; i < 10; i++) {
+            rnum = Math.floor(Math.random() * 10 + 1);
+            randarray.push(rnum);
+        }
+
+        for (var index = 0; index < randarray.length; index++) {
+
+            if (randarray[index] % 2 == 0) {
+                evensum += randarray[index];
+            }
+
+            if (index < 5) {
+                sum = sum + randarray[index];
+            }
+
+        }
+
+        document.getElementById("result1").innerHTML = evensum;
+
+        document.getElementById("result2").innerHTML = sum;
+
+        var user = {
+            name: 'Taymaa',
+            number: '+(963)996276169',
+            age: 24,
+            email: 'taymaajobnah98@gmail.com'
+        }
+        document.getElementById("result3").innerHTML =
+            user.name + "," + user.number + "," + user.age + "," + user.email;
+        document.write(user);
+
+    </script>
+</body>
+
+</html>
